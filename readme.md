@@ -46,6 +46,11 @@ The following steps describe the native installation. Alternatively, use the pro
 
 4. **Install python dependencies**
     ```
+    Install python3 pip(new young-gi)
+    $ sudo apt-get install python3-pip
+    $ sudo apt-get update
+    
+    Install python dependencies
     $ cd ~/catkin_ws/src/dope
     $ python3 -m pip install -r requirements.txt
     ```
@@ -53,8 +58,16 @@ The following steps describe the native installation. Alternatively, use the pro
 5. **Install ROS dependencies**
     ```
     $ cd ~/catkin_ws
-    $ rosdep install --from-paths src -i --rosdistro noetic
+    #$ rosdep install --from-paths src -i --rosdistro noetic # This part error when i try
+    (new young-gi)
+    $ sudo apt install python3-rosdep
+    $ rosdep update
+    $ rosdep install --from-paths src --ignore-src -r -y
     $ sudo apt-get install ros-noetic-rosbash ros-noetic-ros-comm
+    
+    install camera_info_manager_py pkg for noetic(new young-gi)
+    $ cd ~/catkin_ws/src
+    $ git clone https://github.com/ros-perception/camera_info_manager_py
     ```
 
 6. **Build**

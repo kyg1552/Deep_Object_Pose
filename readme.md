@@ -58,9 +58,7 @@ The following steps describe the native installation. Alternatively, use the pro
 5. **Install ROS dependencies**
     ```
     $ cd ~/catkin_ws
-  
-  ~~$ rosdep install --from-paths src -i --rosdistro noetic # This part error when i try~~
-    
+               $ rosdep install --from-paths src -i --rosdistro noetic # This part error when i try
     (new young-gi)
     $ sudo apt install python3-rosdep
     $ rosdep update
